@@ -9,7 +9,7 @@ public:
             {
                 row[j] = ans[i-1][j]+ans[i-1][j-1];
             }
-            ans.emplace_back(row);
+            ans.push_back(row);
         }
         return ans;
         
