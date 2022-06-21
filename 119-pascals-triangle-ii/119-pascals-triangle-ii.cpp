@@ -1,14 +1,18 @@
 class Solution {
 public:
     vector<int> getRow(int rowIndex) {
-        vector<int> curr(rowIndex+1,1);
-        long c=1;
-        
-        for(int idx=1; idx<rowIndex ; idx++)
+        vector<int> prev{1};
+        for(int i=1 ; i <= rowIndex ; i++)
         {
-            c = c * (rowIndex-idx+1) / idx;
-            curr[idx] = c;
+            vector<int> curr(i+1,1);
+            for(int j=1; j<i ; j++)
+            {
+                curr[j] = prev[j] + prev[j-1];
+                
+            }
+            prev = curr;
         }
-        return curr;
+        return prev;
+        
     }
 };
