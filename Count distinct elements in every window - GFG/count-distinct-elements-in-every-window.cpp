@@ -12,24 +12,23 @@ class Solution{
     {
         unordered_map<int,int> mp;
         vector<int> ans;
-        
-        int left=0; 
         for(int i=0 ; i<k ; i++)
         {
             mp[A[i]]++;
         }
         ans.push_back(mp.size());
         
-        for(int right=k ; right<n; right++)
+        for(int i=k ; i<n; i++)
         {
-            mp[A[left]]--;
-            if(mp[A[left]]==0) 
+            mp[A[i-k]]--;
+            if(mp[A[i-k]]==0) 
             {
-                mp.erase(A[left]);
+                mp.erase(A[i-k]);
             }
-            left++;
             
-            mp[A[right]]++;
+            if(mp.find(mp[A[i]])!=mp.end())
+                mp[A[i]];
+            else mp[A[i]]++;
             ans.push_back(mp.size());
         }
         
