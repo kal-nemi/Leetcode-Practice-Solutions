@@ -10,12 +10,13 @@ public:
                 continue;
             
             int j = i;
-            while(--j>=0)
-            {
-                if(sidesLength[i]==sidesLength[j])
-                    break;
-            }
-            if(j != -1) continue;
+            // while(--j>=0)
+            // {
+            //     if(sidesLength[i]==sidesLength[j])
+            //         break;
+            // }
+            // if(j != -1) continue;
+            if((i>0) && (sidesLength[i]== sidesLength[i-1])) continue;
             sidesLength[i] += matchsticks[index];
             if(dfs(sidesLength,matchsticks,index+1 ,target))
                 return true;
