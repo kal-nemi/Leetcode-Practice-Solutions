@@ -25,13 +25,13 @@ public:
                 if(root->left==NULL || root->right==NULL)
                     return root->left? root->left : root->right; //if one child present
 
-                TreeNode *curr = root->left;
-                while(curr->right!=NULL)
+                TreeNode *curr = root->right; // inorder successor which is left most element of  right subtree
+                while(curr->left!=NULL)
                 {
-                    curr = curr->right;
+                    curr = curr->left;
                 }
                 root->val = curr->val;
-                root->left = deleteNode(root->left,curr->val);
+                root->right = deleteNode(root->right,curr->val);
             }
         }
         return root;
