@@ -6,7 +6,7 @@ public:
     }
     
     bool book(int start, int end) {
-        for(auto [x,y]:s)
+        for(auto &[x,y]:s)
         {
             if(x<end && y>start)
                 return false;
