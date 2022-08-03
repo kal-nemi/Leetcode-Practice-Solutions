@@ -1,17 +1,17 @@
 class MyCalendar {
-    vector<pair<int,int>> b;
+    map<int,int> s;
 public:
     MyCalendar() {
         
     }
     
     bool book(int start, int end) {
-        for(auto it:b)
+        for(auto [x,y]:s)
         {
-            if(it.first<end && it.second>start)
+            if(x<end && y>start)
                 return false;
         }
-        b.push_back({start,end});
+        s.insert({start,end});
         return true;
         
         
