@@ -13,7 +13,7 @@ public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         if(root==NULL) return NULL;
         
-        if(root->val == p->val || root->val == q->val) return root;
+        if(root == p || root == q) return root;
         
         TreeNode* lca1 = lowestCommonAncestor(root->left,p,q);
         TreeNode* lca2 = lowestCommonAncestor(root->right,p,q);
