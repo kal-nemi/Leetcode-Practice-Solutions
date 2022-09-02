@@ -21,12 +21,12 @@ public:
         
     }
     vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
-        vector<int> i1,i2;
-        inorder(root1,i1);
-        inorder(root2,i2);
-        vector<int> ans ;
-        ans = i1;
-        copy(i2.begin(),i2.end(),back_inserter(ans));
+        vector<int> ans;
+        inorder(root1,ans);
+        inorder(root2,ans);
+        // vector<int> ans ;
+        // ans = i1;
+        // copy(i2.begin(),i2.end(),back_inserter(ans));
         sort(ans.begin(),ans.end());
         return ans;
         
