@@ -11,7 +11,7 @@ public:
         int maxfrq = 0;
         for(auto it:mp)
         {
-            cout<<it.first;
+            // cout<<it.first;
             if(it.second > maxfrq)
             {
                 res = it.first;
