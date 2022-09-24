@@ -33,6 +33,6 @@ public:
         }
         dfs(root->left,targetSum,mainAns,ans,currSum);
         dfs(root->right,targetSum,mainAns,ans,currSum);
-        ans.pop_back();
+        ans.pop_back();//bactracking step most neccasary
     }
 };
