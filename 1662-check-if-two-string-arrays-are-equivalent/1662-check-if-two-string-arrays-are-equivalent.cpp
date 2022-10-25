@@ -3,18 +3,10 @@ public:
     bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
         string w1 = "", w2 = "";
         for(auto &i:word1){
-            for(int j=0; j<i.length(); j++)
-            {
-                w1.push_back(i[j]);
-                
-            }
+            w1+=i;
         }
         for(auto &i:word2){
-            for(int j=0; j<i.length(); j++)
-            {
-                w2.push_back(i[j]);
-                
-            }
+            w2+=i;
         }
         // cout<<w1<<" "<<w2;
         for(int i=0; i<w1.length(); i++)
