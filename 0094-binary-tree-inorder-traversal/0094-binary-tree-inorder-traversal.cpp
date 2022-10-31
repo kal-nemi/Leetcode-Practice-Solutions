@@ -12,7 +12,7 @@
 class Solution {
 public:
     //Recursive
-    
+    /*
     void inorder(TreeNode* root,vector<int> &v){
     
     
@@ -21,13 +21,13 @@ public:
         v.push_back(root->val);
         inorder(root->right,v);
     }
-   
+    */
     
     vector<int> inorderTraversal(TreeNode* root) {
         vector<int> ans;
-        inorder(root,ans);
+        // inorder(root,ans);
         //Iterative
-        /*
+        
         
         
         stack<TreeNode *> st;
@@ -49,7 +49,7 @@ public:
             }
             
         }
-        */ 
+        
         
         
         
