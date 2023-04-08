@@ -8,6 +8,5 @@ class Node:
 # import copy
 class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
-        l2 = copy.deepcopy(node)
-        return l2
+        return copy.deepcopy(node)
         
